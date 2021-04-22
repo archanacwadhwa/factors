@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+    int num,rem;
+    printf("ENTER THE NUMBER: ");
+    scanf("%d",&num);
+    while(num!=0)
+    {
+        rem=num%10;
+        if(rem%2==0)
+            printf("EVEN: %d\n",rem);
+        else
+            printf("ODD: %d\n",rem);
+        
+        num=num/10;
+    }
+
+    return 0;
+}
