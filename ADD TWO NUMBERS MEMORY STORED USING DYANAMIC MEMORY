@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+    int *a,i,sum=0;
+    a=(int * )malloc(2*sizeof(int));
+    printf("\n ENTER THE VALUES OF 2 ELEMENTS");
+    for(i=0;i<2;i++)
+    {
+        scanf("%d",a+i);
+        sum+=*(a+i);
+    }
+    printf("SUM=%d",sum);
+    free(a);
+}
