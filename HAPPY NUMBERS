@@ -1,0 +1,29 @@
+//HAPPY NUMBER
+#include<stdio.h>
+#include<math.h>
+int squares(int num)
+{
+    int sum=0;
+    while(num!=0)
+    {
+        sum=sum+(num%10)*(num%10);
+        num=num/10;
+    }
+    return sum;
+}
+int main()
+{
+    int num,i,sum;
+    printf("\n ENTER THE NUMBER: ");
+    scanf("%d",&num);
+    sum=squares(num);
+    while(sum!=1 && sum!=4)
+    {
+        sum=squares(sum);
+    }
+    if(sum==1)
+        printf("\n HAPPY NUMBER");
+    else
+        printf("\n NOT HAPPY NUMBER");
+    return 0;    
+}
