@@ -1,25 +1,23 @@
-#include<stdlib.h>
+//PRIME OR NOT
 #include<stdio.h>
-#define MAX 100
 int main()
 {
-    int n,i,j=0;
-    int ar[MAX];
-    printf("\n enter the value of n");
-    scanf("%d",&n);
-    printf("\n digits in same order are \n");
-    while(n>0)
+    int num,i,flag=0;
+    printf("\n ENTER THE NUMBER:");
+    scanf("%d",&num);
+    for(i=2;i<=num/2;++i)
     {
-        ar[j++]=n%10;
-        n=n/10;
+        if(num%i==0)
+        {
+            flag=1;
+            break;
+        }    
     }
-    printf("Odd digits are\n");
-    for(j=i-1;j>=0;j--)
-        if(ar[j]%2==1)
-            printf("%d\n",ar[j]);
-     printf("Even digits are\n");
-     for(j=i-1;j>=0;j--)
-        if(ar[j]%2==0)
-            printf("%d\n",ar[j]);
-}
-    
+    if(flag==1)
+        printf("neither prime nor composite");
+    else if(flag==0) 
+        printf(" prime");
+    else
+        printf("\n not prime");
+    return 0;
+}    
