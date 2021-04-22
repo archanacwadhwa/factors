@@ -1,0 +1,14 @@
+#include<stdio.h>
+struct sum
+{
+    int a,b;
+};
+int main()
+{
+    int sum1;
+    struct sum s;
+    printf("\n enter 2 numbers");
+    scanf("%d%d",&s.a,&s.b);
+    sum1=s.a+s.b;
+    printf("\n sum =%d",sum1);
+}
