@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int dig;
+    int num=5643;
+    while(num!=0)
+    {
+        dig=num%10;
+        num=num/10;
+        printf("\nDIGIT IS:%d",dig);
+    }
+    return 0;
+}
+
