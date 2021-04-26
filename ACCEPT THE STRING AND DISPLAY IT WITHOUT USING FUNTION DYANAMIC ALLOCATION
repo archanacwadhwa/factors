@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+    char *name;
+    name=(char *)malloc(sizeof(char));
+    printf("\n enter the name: ");
+    gets(name);
+    printf("\n the name is :");
+    puts(name);
+
+    return 0;
+}
