@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+struct students
+{
+  char name[20];
+  int marks;
+  char subject[100];
+} student;
+void
+read (students stu[], int num)
+{
+  for (int i = 0; i < num; i++)
+    cin >> stu[i].name >> stu[i].marks >> stu[i].subject;
+}
+
+void
+sort (students stu[], int num)
+{
+  for (int i = 0; i < num; i++)
+    {
+      if (stu[i].marks < 33)
+	cout << stu[i].name << "is failed in " << stu[i].subject << endl;
+    }
+}
+
+void
+display (students stu[], int num)
+{
+  cout << "\nDETAILS ARE :\n";
+  for (int i = 0; i < num; i++)
+    cout << "NAME " << stu[i].name << " MARKS " << stu[i].
+      marks << " SUBJECT " << stu[i].subject << endl;
+}
+
+int
+main ()
+{
+  int num;
+  cout << "Enter the number of students" << endl;
+  cin >> num;
+  students stu[num];
+  cout << "Enter the details of a students NAME MARKS SUBJECT" << endl;
+  read (stu, num);
+  cout << "Details of the students is " << endl;
+  display (stu, num);
+  sort (stu, num);
+}
